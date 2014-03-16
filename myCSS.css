@@ -1,9 +1,10 @@
 @charset "UTF-8";
 /* This is a comment! Text here will be ignored by the browser. */
 
-.container {
-	margin: 0 auto;
-	width: 960px;
+#content {
+    width: 960px;
+    margin: 0 auto;
+    background-color: #66ffff;
 }
 .header {
 	background: #AAAAAA;
