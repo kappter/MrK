@@ -4,8 +4,8 @@ body {
 	margin: 0;
 }
 .container {
-	width: 960px;
 	margin: 0 auto;
+	width: 960px;
 }
 .header {
 	background: #AAAAAA;
