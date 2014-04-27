@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<wordPart>
+  <prefix id="0" prevalue=" in front of or anterior to a/n ">pre</prefix>
+  <prefix id="1" prevalue=" not or oppositse of a/n ">un</prefix>
+  <prefix id="2" prevalue=" against or opposing a/n ">anti</prefix>
+  <prefix id="3" prevalue=" subsequent to a/n ">after</prefix>
+  <prefix id="4" prevalue=" star-like or star-shape in a/n ">astro</prefix>
+  <prefix id="5" prevalue=" bird-like in a/n ">avi</prefix>
+  <prefix id="6" prevalue=" put into a/n ">en</prefix>
+  <prefix id="7" prevalue=" like one's self in a/n ">auto</prefix>
+  <prefix id="8" prevalue=" around a/n ">circum</prefix>
+  <prefix id="9" prevalue=" with a/n ">co</prefix>
+  <prefix id="10" prevalue=" with a/n ">con</prefix>
+  <prefix id="11" prevalue=" against a/n ">contra</prefix>
+  <prefix id="12" prevalue=" off or away from a/n ">de</prefix>
+  <prefix id="13" prevalue=" not a/n ">dis</prefix>
+  <prefix id="14" prevalue=" out of or former to a/n ">ex</prefix>
+  <prefix id="15" prevalue=" beyond or more than a/n ">extra</prefix>
+  <prefix id="16" prevalue=" different than a/n ">hetero</prefix>
+  <prefix id="17" prevalue=" that is the same as a/n ">homo</prefix>
+  <prefix id="18" prevalue=" over or more than a/n ">hyper</prefix>
+  <prefix id="19" prevalue=" turned into a/n ">in</prefix>
+  <prefix id="20" prevalue=" between a/n ">inter</prefix>
+  <prefix id="21" prevalue=" between a/n ">intra</prefix>
+  <prefix id="22" prevalue=" larger than a/n ">macro</prefix>
+  <prefix id="23" prevalue=" smaller than a/n ">micro</prefix>
+  <prefix id="24" prevalue=" one of a/n ">mono</prefix>
+  <prefix id="25" prevalue=" not or without a/n ">non</prefix>
+  <prefix id="26" prevalue=" all around a/n ">omni</prefix>
+  <prefix id="27" prevalue=" existing after a/n ">post</prefix>
+  <prefix id="28" prevalue=" existing under a/n ">sub</prefix>
+  <prefix id="29" prevalue=" occurring at the same time as a/n ">syn</prefix>
+  <prefix id="30" prevalue=" something across a/n ">trans</prefix>
+  <prefix id="31" prevalue=" having three of a/n ">tri</prefix>
+  <prefix id="32" prevalue=" friendly or pleasant part of a/n ">ambi</prefix>  
+  <prefix id="33" prevalue=" so as to walk slow in a/n ">ambul</prefix> 
+  <prefix id="34" prevalue=" names of flowers in a/n ">anthro</prefix> 
+  <prefix id="35" prevalue=" having four of a/n ">tetra</prefix> 
+  <prefix id="36" prevalue=" extremely high numbers of a/n ">ultra</prefix> 
+  <prefix id="37" prevalue=" science of life in a/n ">bio</prefix> 
+  <prefix id="38" prevalue=" five voices in a/n ">quin</prefix> 
+  <prefix id="39" prevalue=" come back from a/n ">re</prefix> 
+  <prefix id="40" prevalue=" fire or fireworks in a/n ">pyro</prefix> 
+  <prefix id="41" prevalue=" part of a city in a/n ">poly</prefix> 
+</wordPart>

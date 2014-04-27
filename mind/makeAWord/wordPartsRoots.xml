@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<wordPart>
+  <root id="0" rootvalue="large body of matter.">-mass-</root>
+  <root id="1" rootvalue="separate piece of something.">-break-</root>
+  <root id="2" rootvalue="long, thin, flat piece of hard material.">-board-</root>
+  <root id="3" rootvalue="distributing order.">-noma-</root>
+  <root id="4" rootvalue="sound.">-phon-</root>
+  <root id="5" rootvalue="earthly object.">-terr-</root>
+  <root id="6" rootvalue="earth or worldly object.">-geo-</root>
+  <root id="7" rootvalue="timely thing.">-chrono-</root>
+  <root id="8" rootvalue="lawful matter.">-jur-</root>
+  <root id="9" rootvalue="loving thing.">-phil-</root>
+  <root id="10" rootvalue="lit object.">-photo-</root>
+  <root id="11" rootvalue="piece of writing.">-scrib-</root>
+  <root id="12" rootvalue="order of things.">-mand-</root>
+</wordPart>
