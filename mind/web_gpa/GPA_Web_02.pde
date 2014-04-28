@@ -1137,11 +1137,19 @@ class Button {
     text(letterGrade,x+3,y+18);
     hoverButton();
   }
+  void checkMinMax() {
+    if (clickCount >=16){
+      clickCount = 16;
+    } else if (clickCount <= 0){
+      clickCount = 0;
+    }
+  }
   
   // Handle mouse actions
   void hoverButton() {
     overButton = mouseX > x && mouseX < x+buttonW && mouseY > y && mouseY < y+buttonH;
     if(overButton == true && mousePressed == true && (mouseButton == LEFT)) {
+      checkMinMax();
       clickCount++;
       if(clickCount == 1){
         assignGrade(" A");
