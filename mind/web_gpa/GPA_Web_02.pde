@@ -268,7 +268,7 @@ int count = 0;
 
 void setup() {
   size(635, 720);
-  frameRate(25);
+  frameRate(15);
   smooth();
 }
 
