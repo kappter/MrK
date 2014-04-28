@@ -322,9 +322,9 @@ void draw() {
   total11th();
   total12th();
   totalOth();
-  text("Credit needed to graduate",50,710);
+  text("Credit needed to graduate:",50,710);
   setGradTotol();
-  text(gradCredit - gradTotal, 200,710);
+  text(gradCredit - gradTotal, 202,710);
   text("Total Credits:", 480,710);
   text(gradTotal + "/27.0",560,710);
   updateLA();
