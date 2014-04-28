@@ -1139,7 +1139,7 @@ class Button {
   }
   void checkMinMax() {
     if (clickCount >=16){
-      clickCount = 16;
+      clickCount = 0;
     } else if (clickCount <= 0){
       clickCount = 0;
     }
