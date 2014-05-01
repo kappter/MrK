@@ -1182,36 +1182,40 @@ class Button {
       }
       //stroke(200,255,0);
     } else if (overButton == true && mousePressed == true && (mouseButton == RIGHT)){
-      clickCount--;
-      if(clickCount == 1){
-        assignGrade(" A");
-      } else if (clickCount == 2){
-        assignGrade("A-");
-      } else if (clickCount == 3){
-        assignGrade("B+");
-      } else if (clickCount == 4){
-        assignGrade(" B");
-      } else if (clickCount == 5){
-        assignGrade("B-");
-      } else if (clickCount == 6){
-        assignGrade("C+");
-      } else if (clickCount == 7){
-        assignGrade(" C");
-      } else if (clickCount == 8){
-        assignGrade("C-");
-      } else if (clickCount == 9){
-        assignGrade("D+");
-      } else if (clickCount == 10){
-        assignGrade(" D");
-      } else if (clickCount == 11){
-        assignGrade("D-");
-      } else if (clickCount == 13){
-        assignGrade(" F");
-      } else if (clickCount == 14){
-        assignGrade("P");
-      }else if (clickCount == 15){
+      if (clickCount == 0) {
+        clickCount = 15;
         assignGrade("R");
-      }
+      } else
+        clickCount--;
+        if (clickCount == 1){
+          assignGrade(" A");
+        } else if (clickCount == 2){
+          assignGrade("A-");
+        } else if (clickCount == 3){
+          assignGrade("B+");
+        } else if (clickCount == 4){
+          assignGrade(" B");
+        } else if (clickCount == 5){
+          assignGrade("B-");
+        } else if (clickCount == 6){
+          assignGrade("C+");
+        } else if (clickCount == 7){
+          assignGrade(" C");
+        } else if (clickCount == 8){
+          assignGrade("C-");
+        } else if (clickCount == 9){
+          assignGrade("D+");
+        } else if (clickCount == 10){
+          assignGrade(" D");
+        } else if (clickCount == 11){
+          assignGrade("D-");
+        } else if (clickCount == 13){
+          assignGrade(" F");
+        } else if (clickCount == 14){
+          assignGrade("P");
+        }else if (clickCount == 15){
+          assignGrade("R");
+        }
     }
   }
 
