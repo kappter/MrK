@@ -722,7 +722,7 @@ void total9th() {
     el19_1.credit + el19_2.credit + el19_3.credit + el19_4.credit + 
     el29_1.credit + el29_2.credit + el29_3.credit + el29_4.credit + 
     el39_1.credit + el39_2.credit + el39_3.credit + el39_4.credit;
-    text(total9,583,110);
+    text(total9 + "\n" + "/" + (total9+totalO),583,110);
 }
 void total10th() {
   total10 = la10_1.credit + la10_2.credit + la10_3.credit + la10_4.credit + 
@@ -738,7 +738,7 @@ void total10th() {
     el110_1.credit + el110_2.credit + el110_3.credit + el110_4.credit + 
     el210_1.credit + el210_2.credit + el210_3.credit + el210_4.credit + 
     el310_1.credit + el310_2.credit + el310_3.credit + el310_4.credit;
-    text(total10,583,230);
+    text(total10 + "\n" + "/" + (total9+total10+totalO),583,230);
 }
 void total11th() {
   total11 = la11_1.credit + la11_2.credit + la11_3.credit + la11_4.credit + 
@@ -754,7 +754,7 @@ void total11th() {
     el111_1.credit + el111_2.credit + el111_3.credit + el111_4.credit + 
     el211_1.credit + el211_2.credit + el211_3.credit + el211_4.credit + 
     el311_1.credit + el311_2.credit + el311_3.credit + el311_4.credit;
-    text(total11,583,350);
+    text(total11 + "\n" + "/" + (total9+total10+total11+totalO),583,350);
 }
 void total12th() {
   total12 = la12_1.credit + la12_2.credit + la12_3.credit + la12_4.credit + 
@@ -770,7 +770,7 @@ void total12th() {
     el112_1.credit + el112_2.credit + el112_3.credit + el112_4.credit + 
     el212_1.credit + el212_2.credit + el212_3.credit + el212_4.credit + 
     el312_1.credit + el312_2.credit + el312_3.credit + el312_4.credit;
-    text(total12,583,470);
+    text(total12 + "\n" + "/" + (total9+total10+total11+total12+totalO),583,470);
 }
 void totalOth() {
   totalO = laO_1.credit + laO_2.credit + laO_3.credit + laO_4.credit + 
