@@ -265,6 +265,7 @@ float gradTotal = 0.0;
 float GPA = 0.0;
 int gradesAssigned = 0;
 int count = 0;
+boolean canGrad = false;
 
 void setup() {
   size(635, 720);
@@ -322,7 +323,13 @@ void draw() {
   total11th();
   total12th();
   totalOth();
+  canGraduate();
   text("Credit needed to graduate:",50,710);
+  if (canGrad) {
+    text("Eligible to graduate: YES",240,693);
+  } else {
+    text("Eligible to graduate: NO",240,693);
+  }
   setGradTotol();
   text(gradCredit - gradTotal, 202,710);
   text("Total Credits:", 480,710);
@@ -781,6 +788,16 @@ void totalOth() {
     el3O_1.credit + el3O_2.credit + el3O_3.credit + el3O_4.credit;
     text(totalO,583,590);
 }
+void canGraduate() {
+  if (elCredit <= 0 && flCredit <= 0 && ctCredit <= 0 && heCredit <= 0 && 
+  cteCredit <= 0 && peCredit <= 0 && artCredit <= 0 && govCredit <= 0 && 
+  ssCredit <= 0 && scCredit <= 0 && maCredit <= 0 && laCredit <= 0 && gradTotal >= 27.0) {
+    canGrad = true;
+  } else {
+    canGrad = false;
+  }
+}
+
 void updateGPA() {
   GPA = (la9_1.gradeVal + la9_2.gradeVal + la9_3.gradeVal + la9_4.gradeVal + 
     la10_1.gradeVal + la10_2.gradeVal + la10_3.gradeVal + la10_4.gradeVal + 
@@ -845,7 +862,7 @@ void updateGPA() {
     el312_1.gradeVal + el312_2.gradeVal + el312_3.gradeVal + el312_4.gradeVal +
     el3O_1.gradeVal + el3O_2.gradeVal + el3O_3.gradeVal + el3O_4.gradeVal) / gradesAssigned;
   textSize(12);
-  text("GPA:" + GPA,250,710);
+  text("GPA:" + GPA,290,710);
 }
 
 void setGradTotol() {
