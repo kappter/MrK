@@ -633,7 +633,7 @@ void updateSS() {
    ssO_1.credit - ssO_2.credit - ssO_3.credit - ssO_4.credit;
   fill(0);
   textSize(10);
-  text(ssCredit + "\n" + "/3.0",169,660);
+  text(ssCredit + "\n" + "/2.0",169,660);
 }
 void updateGov() {
  govCredit = 0.5 - gov9_1.credit - gov9_2.credit - gov10_1.credit - gov10_2.credit - gov11_1.credit - gov11_2.credit - gov12_1.credit - gov12_2.credit - govO_1.credit - govO_2.credit ;
@@ -707,7 +707,7 @@ void updateEL() {
    el3O_1.credit - el3O_2.credit - el3O_3.credit - el3O_4.credit;
   fill(0);
   textSize(10);
-  text(elCredit + "\n" + "/8.0",525,660);
+  text(elCredit + "\n" + "/6.0",525,660);
 }
 void total9th() {
   total9 = la9_1.credit + la9_2.credit + la9_3.credit + la9_4.credit + 
