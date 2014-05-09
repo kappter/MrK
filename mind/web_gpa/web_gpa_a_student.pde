@@ -265,6 +265,7 @@ float gradTotal = 0.0;
 float GPA = 0.0;
 int gradesAssigned = 0;
 int count = 0;
+boolean canGrad = false;
 
 void setup() {
   size(635, 720);
@@ -322,7 +323,13 @@ void draw() {
   total11th();
   total12th();
   totalOth();
+  canGraduate();
   text("Credit needed to graduate:",50,710);
+  if (canGrad) {
+    text("Eligible to graduate: YES",240,693);
+  } else {
+    text("Eligible to graduate: NO",240,693);
+  }
   setGradTotol();
   text(gradCredit - gradTotal, 202,710);
   text("Total Credits:", 480,710);
@@ -715,7 +722,7 @@ void total9th() {
     el19_1.credit + el19_2.credit + el19_3.credit + el19_4.credit + 
     el29_1.credit + el29_2.credit + el29_3.credit + el29_4.credit + 
     el39_1.credit + el39_2.credit + el39_3.credit + el39_4.credit;
-    text(total9,583,110);
+    text(total9 + "\n" + "/" + (total9+totalO),583,110);
 }
 void total10th() {
   total10 = la10_1.credit + la10_2.credit + la10_3.credit + la10_4.credit + 
@@ -731,7 +738,7 @@ void total10th() {
     el110_1.credit + el110_2.credit + el110_3.credit + el110_4.credit + 
     el210_1.credit + el210_2.credit + el210_3.credit + el210_4.credit + 
     el310_1.credit + el310_2.credit + el310_3.credit + el310_4.credit;
-    text(total10,583,230);
+    text(total10 + "\n" + "/" + (total9+total10+totalO),583,230);
 }
 void total11th() {
   total11 = la11_1.credit + la11_2.credit + la11_3.credit + la11_4.credit + 
@@ -747,7 +754,7 @@ void total11th() {
     el111_1.credit + el111_2.credit + el111_3.credit + el111_4.credit + 
     el211_1.credit + el211_2.credit + el211_3.credit + el211_4.credit + 
     el311_1.credit + el311_2.credit + el311_3.credit + el311_4.credit;
-    text(total11,583,350);
+    text(total11 + "\n" + "/" + (total9+total10+total11+totalO),583,350);
 }
 void total12th() {
   total12 = la12_1.credit + la12_2.credit + la12_3.credit + la12_4.credit + 
@@ -763,7 +770,7 @@ void total12th() {
     el112_1.credit + el112_2.credit + el112_3.credit + el112_4.credit + 
     el212_1.credit + el212_2.credit + el212_3.credit + el212_4.credit + 
     el312_1.credit + el312_2.credit + el312_3.credit + el312_4.credit;
-    text(total12,583,470);
+    text(total12 + "\n" + "/" + (total9+total10+total11+total12+totalO),583,470);
 }
 void totalOth() {
   totalO = laO_1.credit + laO_2.credit + laO_3.credit + laO_4.credit + 
@@ -781,6 +788,16 @@ void totalOth() {
     el3O_1.credit + el3O_2.credit + el3O_3.credit + el3O_4.credit;
     text(totalO,583,590);
 }
+void canGraduate() {
+  if (elCredit <= 0 && flCredit <= 0 && ctCredit <= 0 && heCredit <= 0 && 
+  cteCredit <= 0 && peCredit <= 0 && artCredit <= 0 && govCredit <= 0 && 
+  ssCredit <= 0 && scCredit <= 0 && maCredit <= 0 && laCredit <= 0 && gradTotal >= 27.0) {
+    canGrad = true;
+  } else {
+    canGrad = false;
+  }
+}
+
 void updateGPA() {
   GPA = (la9_1.gradeVal + la9_2.gradeVal + la9_3.gradeVal + la9_4.gradeVal + 
     la10_1.gradeVal + la10_2.gradeVal + la10_3.gradeVal + la10_4.gradeVal + 
@@ -845,7 +862,7 @@ void updateGPA() {
     el312_1.gradeVal + el312_2.gradeVal + el312_3.gradeVal + el312_4.gradeVal +
     el3O_1.gradeVal + el3O_2.gradeVal + el3O_3.gradeVal + el3O_4.gradeVal) / gradesAssigned;
   textSize(12);
-  text("GPA:" + GPA,250,710);
+  text("GPA:" + GPA,290,710);
 }
 
 void setGradTotol() {
@@ -1182,36 +1199,40 @@ class Button {
       }
       //stroke(200,255,0);
     } else if (overButton == true && mousePressed == true && (mouseButton == RIGHT)){
-      clickCount--;
-      if(clickCount == 1){
-        assignGrade(" A");
-      } else if (clickCount == 2){
-        assignGrade("A-");
-      } else if (clickCount == 3){
-        assignGrade("B+");
-      } else if (clickCount == 4){
-        assignGrade(" B");
-      } else if (clickCount == 5){
-        assignGrade("B-");
-      } else if (clickCount == 6){
-        assignGrade("C+");
-      } else if (clickCount == 7){
-        assignGrade(" C");
-      } else if (clickCount == 8){
-        assignGrade("C-");
-      } else if (clickCount == 9){
-        assignGrade("D+");
-      } else if (clickCount == 10){
-        assignGrade(" D");
-      } else if (clickCount == 11){
-        assignGrade("D-");
-      } else if (clickCount == 13){
-        assignGrade(" F");
-      } else if (clickCount == 14){
-        assignGrade("P");
-      }else if (clickCount == 15){
+      if (clickCount == 0) {
+        clickCount = 15;
         assignGrade("R");
-      }
+      } else
+        clickCount--;
+        if (clickCount == 1){
+          assignGrade(" A");
+        } else if (clickCount == 2){
+          assignGrade("A-");
+        } else if (clickCount == 3){
+          assignGrade("B+");
+        } else if (clickCount == 4){
+          assignGrade(" B");
+        } else if (clickCount == 5){
+          assignGrade("B-");
+        } else if (clickCount == 6){
+          assignGrade("C+");
+        } else if (clickCount == 7){
+          assignGrade(" C");
+        } else if (clickCount == 8){
+          assignGrade("C-");
+        } else if (clickCount == 9){
+          assignGrade("D+");
+        } else if (clickCount == 10){
+          assignGrade(" D");
+        } else if (clickCount == 11){
+          assignGrade("D-");
+        } else if (clickCount == 13){
+          assignGrade(" F");
+        } else if (clickCount == 14){
+          assignGrade("P");
+        }else if (clickCount == 15){
+          assignGrade("R");
+        }
     }
   }
 
@@ -1225,52 +1246,52 @@ class Button {
     } else if (letterGrade == " A"){
       gradeVal = 4.0;
       credit = 0.25;
-      buttonC = 200;
+      buttonC = 230;
     } else if (letterGrade == "A-"){
       gradeVal = 3.666;
       credit = 0.25;
-      buttonC = 200;
+      buttonC = 230;
     } else if (letterGrade == "B+"){
       gradeVal = 3.333;
       credit = 0.25;
-      buttonC = 200;
+      buttonC = 230;
     } else if (letterGrade == " B"){
       gradeVal = 3.00;
       credit = 0.25;
-      buttonC = 200;
+      buttonC = 230;
     } else if (letterGrade == "B-"){
       gradeVal = 2.666;
       credit = 0.25;
-      buttonC = 200;
+      buttonC = 230;
     } else if (letterGrade == "C+"){
       gradeVal = 2.333;
       credit = 0.25;
-      buttonC = 200;
+      buttonC = 230;
     } else if (letterGrade == " C"){
       gradeVal = 2.00;
       credit = 0.25;
-      buttonC = 200;
+      buttonC = 230;
     } else if (letterGrade == "C-"){
       gradeVal = 1.666;
       credit = 0.25;
-      buttonC = 200;
+      buttonC = 230;
     } else if (letterGrade == "D+"){
       gradeVal = 1.333;
       credit = 0.25;
-      buttonC = 200;
+      buttonC = 230;
     } else if (letterGrade == " D"){
       gradeVal = 1.00;
       credit = 0.25;
-      buttonC = 200;
+      buttonC = 230;
     } else if (letterGrade == "D-"){
       gradeVal = 0.666;
       credit = 0.25;
-      buttonC = 200;
+      buttonC = 230;
     } else if (letterGrade == "P"){
       gradeVal = 0.00;
       set = false;
       credit = 0.25;
-      buttonC = 200;
+      buttonC = 230;
     }else if (letterGrade == "R"){
       set = false;
       gradeVal = 0.0;
