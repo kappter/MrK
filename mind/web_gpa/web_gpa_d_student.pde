@@ -1246,52 +1246,52 @@ class Button {
     } else if (letterGrade == " A"){
       gradeVal = 4.0;
       credit = 0.25;
-      buttonC = 200;
+      buttonC = 230;
     } else if (letterGrade == "A-"){
       gradeVal = 3.666;
       credit = 0.25;
-      buttonC = 200;
+      buttonC = 230;
     } else if (letterGrade == "B+"){
       gradeVal = 3.333;
       credit = 0.25;
-      buttonC = 200;
+      buttonC = 230;
     } else if (letterGrade == " B"){
       gradeVal = 3.00;
       credit = 0.25;
-      buttonC = 200;
+      buttonC = 230;
     } else if (letterGrade == "B-"){
       gradeVal = 2.666;
       credit = 0.25;
-      buttonC = 200;
+      buttonC = 230;
     } else if (letterGrade == "C+"){
       gradeVal = 2.333;
       credit = 0.25;
-      buttonC = 200;
+      buttonC = 230;
     } else if (letterGrade == " C"){
       gradeVal = 2.00;
       credit = 0.25;
-      buttonC = 200;
+      buttonC = 230;
     } else if (letterGrade == "C-"){
       gradeVal = 1.666;
       credit = 0.25;
-      buttonC = 200;
+      buttonC = 230;
     } else if (letterGrade == "D+"){
       gradeVal = 1.333;
       credit = 0.25;
-      buttonC = 200;
+      buttonC = 230;
     } else if (letterGrade == " D"){
       gradeVal = 1.00;
       credit = 0.25;
-      buttonC = 200;
+      buttonC = 230;
     } else if (letterGrade == "D-"){
       gradeVal = 0.666;
       credit = 0.25;
-      buttonC = 200;
+      buttonC = 230;
     } else if (letterGrade == "P"){
       gradeVal = 0.00;
       set = false;
       credit = 0.25;
-      buttonC = 200;
+      buttonC = 230;
     }else if (letterGrade == "R"){
       set = false;
       gradeVal = 0.0;
