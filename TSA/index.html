@@ -1,0 +1,310 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style type="text/css">
+body {
+  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 20px 50px 20px;
+  font-size: 13px;
+  background: #42413C;
+  color:#000;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 
+	padding-right: 15px;
+	padding-left: 15px; 
+}
+
+a img {
+	border: none;
+}
+
+a:link {
+	color: #6E6C64;
+	text-decoration: none; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: underline;
+}
+
+.container {
+	width: 960px;
+	padding: 0;
+	background-color: #fff;
+	margin: 10px auto;
+}
+
+.header {
+	background-color: #555;
+	width:100%;
+	appearance:pull-down-menu;
+	height: 500px;	
+}
+
+.sidebar1 {
+	float: left;
+	width: 230px;
+	background-color: #99CCFF;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+.content {
+	padding: 10px 0;
+	width: 500px;
+	float: left;
+	background-color: #fff;
+}
+.sidebar2 {
+	float: left;
+	width: 230px;
+	background-color: #99CCFF;
+	padding: 10px 0;
+}
+
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
+}
+
+/* ~~ The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) ~~ */
+ul.nav {
+	list-style: none; /* this removes the list marker */
+	border-top: 1px solid #666; /* this creates the top border for the links - all others are placed using a bottom border on the LI */
+	margin-bottom: 15px; /* this creates the space between the navigation on the content below */
+}
+ul.nav li {
+	border-bottom: 1px solid #666; /* this creates the button separation */
+}
+ul.nav a, ul.nav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
+	padding: 5px 5px 5px 15px;
+	display: block; /* this gives the anchor block properties so it fills out the whole LI that contains it so that the entire area reacts to a mouse click. */
+	width: 141px;  /*this width makes the entire button clickable for IE6. If you don't need to support IE6, it can be removed. Calculate the proper width by subtracting the padding on this link from the width of your sidebar container. */
+	text-decoration: none;
+	background-color: #333333;
+	color:#FFFFFF;
+	height: 41px;
+	
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
+	color:#FFCC00;
+}
+
+/* ~~ The footer styles ~~ */
+.footer {
+	padding: 10px 0;
+	background-color: #333333;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+}
+
+/* ~~ Miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the .container) if the .footer is removed or taken out of the .container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+ul {
+  text-align: left;
+  display: inline;
+  margin: 0;
+  padding: 15px 4px 17px 0;
+  list-style: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+ul li {
+  font: bold 14px sans-serif;
+  display: inline-block;
+  margin-right: -4px;
+  position: relative;
+  padding: 15px 53px;
+  background: #555;
+  cursor: pointer;
+  transition: all 0.2s;
+  color:#fff;
+}
+
+ul li:hover {
+  background: #fff;
+  color: #555;
+}
+
+ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 46px;
+  left: 0;
+  width: 200px;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -transition: opacity 0.2s;
+  
+  
+}
+
+ul li ul li { 
+  background: #fff; 
+  display: block; 
+  color: #707070;
+  text-shadow: 0;
+  border-style: double;
+  border-width: 1px;
+  border-color: #D4D4D4;
+  
+}
+
+ul li ul li:hover { 
+	background: #D7D7D7; 
+}
+
+ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+  <img src="Images/LogoTemplateFinal.fw.png" width="960" height="150" style="background-color: #FFFFFF; display:block;
+  " />
+  
+<ul><li>Home
+		<ul>
+        <li><a href="../Index.html">Home</a></li>
+        <li><a href="Home/News.html">News</a></li>
+        </ul>
+	</li>
+  <li>CTE
+  	<ul>
+    	<li><a href="CTE/SkylineCTE.html">Skyline CTE</a></li>
+        <li><a href="CTE/GTI.html">Granite Technical Institution</a></li>
+        <li><a href="http://skylinecareercenter.weebly.com/">Career Center</a></li>
+        <li><a href="CTE/TechCourse.html">Technology Courses</a></li>
+        <li><a href="CTE/Internships.html">Internships</a></li>
+        <li><a href="CTE/Graphics.html">Graphics</a></li>
+        <li><a href="https://www.precisionexams.com/usoe/welcome/">CTE Testing</a></li>
+        
+    </ul>
+  </li>
+  <li>TSA
+    <ul>
+      <li><a href="TSA/General.html">General</a></li>
+      <li><a href="TSA/About.html">About</a></li>
+      <li><a href="TSA/Leadership.html">Leadership</a></li>
+      <li><a href="TSA/Competitions.html">Competitions</a></li>
+      <li><a href="TSA/Events & Conferences.html">Events & Conferences</a></li>
+      <li><a href="TSA/Service Projects.html">Service Projects</a></li>
+      <li><a href="TSA/Fundraising.html">Fundraising</a></li>
+      <li><a href="TSA/VEX.html">VEX</a></li>
+    </ul>
+  </li>
+  <li>Design Brief
+  	<ul>
+    	<li><a href="Design Brief/Overview.html">Overview</a></li>
+        <li><a href="Design Brief/Problem.html">Problem</a></li>
+        <li><a href="Design Brief/Information.html">Information</a></li>
+        <li><a href="Design Brief/Solution.html">Solution</a></li>
+    </ul>
+  </li>
+  <li>Calendar
+  	<ul>
+    	<li><a href="Calendar/Calendar.html">TSA Calendar</a></li>
+    </ul>
+  </li>
+  <li>Resources
+  	<ul>
+    	<li><a href="Resources/Resources.html">Resources Links & References</a></li>
+    </ul>
+  </li>
+</ul>
+
+<img src="Images/Overlook01-960x300_c.jpg" width"960" height"300" style"display:block;" />
+  </div>
+<div class="sidebar1">
+	<h1><a href="Home/News.html">Skyline TSA Blog</a></h1>
+    <h2><a href="Home/News.html">TSA State Conference is Coming Up Fast</a></h2>
+    <p>March 12, 2015 by Alexei Garcia</p>
+    <p>Date: March 18th, 2015 </p>
+    <p>Location: Davis Applied Technology College 550 East 300 South Kaysville, Utah </p>
+    <p>Hey Skyline!  TSA state conference is just around the corner.  March 18th to be exact.  Here's hoping you're ready to go and have all your competitions done.  If not, well, have fun cramming it all in this last week.  The day is promising to be an exciting event full of technology, new ideas, and most important, new people to meet who are just like you... <a href="Home/News.html">[Read More]</a></p>
+    
+    <h2><a href="Home/News.html">Calvin Nielson to Host Rubic's Competition</a></h2>
+    <p>March 3, 2015 by Alexei Garcia</p>
+    <p>Skyline sophomore Calvin Nielson will be hosting Rubic's Cube Competition on π Day (Pi Day).  Come show off your mad rubic's cubing skills and impress hundreds of spectators. </p>
+    <p>Utah Open 2015 Date: March 14, 2015 (Pi Day) </p>
+    <p>Location: University of Utah, Warnock Engineering Building, 1230 72 Central Campus Drive Salt Lake City,... <a href="Home/News.html">[Read More]</a></p>
+    <!-- end .sidebar1 --></div>
+  <div class="content">
+    <h1>Welcome to Skyline TSA!</h1>
+    <img src="Images/TSA_Logo_4c no white copy.jpg" width="400" height="220" style="background-color: #FFFFFF; display:block;padding-left: 10px;" />
+    <p></p>
+    <h2>What is TSA?</h2>
+    <p>The Technology Student Association (TSA) is a national student organization devoted exclusively to the needs of students who are engaged in science, technology, engineering and mathematics (STEM).</p>
+    <h2>School Chapters</h2>
+    <p>TSA chapters take the study of STEM beyond the classroom and allows students the chance to pursue their interests among friends with similar goals and interests. Together, chapter members work on competitive events, attend conferences on the state and national levels and have a good time raising funds to get there. Chapter organization develops leadership, as members may become officers within their state and then run nationally. Our chapters are committed to a national service project and are among the most service-oriented groups in the community.</p>
+    <h2>Competitions</h2>
+    <p>In order to engage students with the drive to make a difference in the worl, TSA offers activities that captivate and intrigue students into spending hours working on it after school for weeks at a time.  TSA members have the opportunity to compete at exciting state conferences and then the annual National Conference.  These competitions focus on the subjects of science, technology, engineering and math, however can vary greatly to suit the interests of the member.  Students can work individually or as a team member in areas such as agriculture and biotechnology, website design, dragster design, flight challenge, film technology, CAD with 3D modeling, desktop publishing, debate, fashion design, radio controlled transportation, or scientific visualization.</p>
+    <!-- end .content --></div>
+  <div class="sidebar2">
+    <h1><a href="Home/News.html">News</a></h1>
+    <h2><a href="Home/News.html">DigiForge Technology Conference</a></h2>
+    <p>February 9, 2015 by Mr. Kapptie</p>
+    <p>Thursday, March 19, 2015 8:00 am - 12:30 pm @ SLCC's South City Campus</p>
+    <p>Let’s do some math.  In 2013, only 61 students in Utah took the AP Computer Science test. That same year, 35,721 AP tests were taken in Utah.  So for every 585 AP tests taken, only 1 AP CS test was taken.  Ok, you get the point.  Clearly we have some work to do to get more students into tech.  The good news is that on March 13, 2014, over 600 students will attend the DigiForge Student Conference, aka #UtahDigiCon... <a href="Home/News.html">[Read More]</a></p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    
+  </div>
+  <div class="footer">
+    <p><font color = #FFFFFF></font></p>
+    <center><h4><font color =#FFFFFF><font color="white"><a href="Contact.html">Contact</a></font> | Copyright 2015</h4></center>
+  <!-- end .footer --></div>
+  <!-- end .container --></div>
+
+</body>
+</html>

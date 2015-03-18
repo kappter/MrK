@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <drjava version="drjava-20140826-r5761">
-  <project autorefresh="false" root="" work="">
-    <createjar file=""/>
+  <project autorefresh="false" main="Main" manifest="" root="" work="">
+    <createjar file="Test" flags="25"/>
     <source>
-      <file name="Main.java" package="" timestamp="20-Nov-2014 13:57:01">
-        <select from="0" to="0"/>
+      <file active="true" name="Main.java" package="" timestamp="20-Nov-2014 13:57:01">
+        <select from="169" to="169"/>
         <scroll column="0" row="0"/>
       </file>
     </source>

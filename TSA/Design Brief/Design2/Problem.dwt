@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Untitled Document</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link href="thrColFixHdr.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div class="container">
+  <div class="header">
+  <a href="#"><img src="Images/LogoTemplateFinal.fw.png" width="960" height="150" style="background-color: #C6D580; display:block;" /></a>
+    <ul class="nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">CTE</a></li>
+      <li><a href="#">TSA</a></li>
+      <li><a href="#">Design Brief</a></li>
+      <li><a href="#">Calendar</a></li>
+    </ul>
+  </div>
+  <div class="sidebar1">
+  <h4>Sources / Additional Reading</h4>
+    <p><a href="http://www.epa.gov/osw/conserve/materials/ecycling/faq.htm">EPA</a><a href="http://www.slcgov.com/node/1518">Salt_Lake_City</a>385-468-6325</p>
+    <!-- end .sidebar1 --></div>
+  <div class="content">
+    <h1>Problem</p>
+    <h2>E-Waste</h2>
+    <p>In an increasingly technology dependent society, we wear through an astounding amount of electronic waste yearly. The U.S. is the largest producer of E-Waste, creating approximately 9.4 metric tons of electronic waste in 2012, 10% of which was recycled. That shocking total has only increased since then. The remaining waste is dumped into increasingly full landfills, or into the environment, leaking toxic substances like cadmium, mercury, and lead.</p>
+    <p><img src="Images/Electronic-Waste.jpg" width = 100%></p>
+    <h3>Local Damage</h3>
+    <p>Though Salt Lake City may not be the largest city contributor of E-Waste, it is still an environmental hazard that must be remedied, and threatens our pristine mountains. <a href="#">How_you_can_help!</a></p>
+    <!-- end .content --></div>
+   <div class="sidebar2">
+    <h4>Links</h4>
+    <p><a href="#">Information</a></p>
+    <p><a href="#">Overview</a></p>
+    <p><a href="#">Problem</a></p>
+    <p><a href="#">Solutions</a></p>
+  </div>
+  <div class="footer">
+    <p><font color = #FFFFFF></font></p>
+    <center><h4><font color =#FFFFFF>Contact</h4></center>
+  <!-- end .footer --></div>
+  <!-- end .container --></div>
+</body>
+</html>

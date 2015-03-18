@@ -1,0 +1,278 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style type="text/css">
+body {
+  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 20px 50px 20px;
+  font-size: 13px;
+  background: #42413C;
+  color:#000;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 
+	padding-right: 15px;
+	padding-left: 15px; 
+}
+
+a img {
+	border: none;
+}
+
+a:link {
+	color: #42413C;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+
+.container {
+	width: 960px;
+	padding: 0;
+	background-color: #fff;
+	margin: 10px auto;
+}
+
+.header {
+	background-color: #555;
+	width:100%;
+	appearance:pull-down-menu;
+	height: 195px;	
+}
+
+.content {
+	padding: 10px 0;
+	width: 960px;
+	float: left;
+	background-color: #fff;
+	padding-top: 10px;
+}
+
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
+}
+
+/* ~~ The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) ~~ */
+ul.nav {
+	list-style: none; /* this removes the list marker */
+	border-top: 1px solid #666; /* this creates the top border for the links - all others are placed using a bottom border on the LI */
+	margin-bottom: 15px; /* this creates the space between the navigation on the content below */
+}
+ul.nav li {
+	border-bottom: 1px solid #666; /* this creates the button separation */
+}
+ul.nav a, ul.nav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
+	padding: 5px 5px 5px 15px;
+	display: block; /* this gives the anchor block properties so it fills out the whole LI that contains it so that the entire area reacts to a mouse click. */
+	width: 141px;  /*this width makes the entire button clickable for IE6. If you don't need to support IE6, it can be removed. Calculate the proper width by subtracting the padding on this link from the width of your sidebar container. */
+	text-decoration: none;
+	background-color: #333333;
+	color:#FFFFFF;
+	height: 41px;
+	
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
+	color:#FFCC00;
+}
+
+/* ~~ The footer styles ~~ */
+.footer {
+	padding: 10px 0;
+	background-color: #333333;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+}
+
+/* ~~ Miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the .container) if the .footer is removed or taken out of the .container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+ul {
+  text-align: left;
+  display: inline;
+  margin: 0;
+  padding: 15px 4px 17px 0;
+  list-style: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+ul li {
+  font: bold 14px sans-serif;
+  display: inline-block;
+  margin-right: -4px;
+  position: relative;
+  padding: 15px 53px;
+  background: #555;
+  cursor: pointer;
+  transition: all 0.2s;
+  color:#fff;
+}
+
+ul li:hover {
+  background: #fff;
+  color: #555;
+}
+
+ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 46px;
+  left: 0;
+  width: 200px;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -transition: opacity 0.2s;
+  border: 1px;
+  
+}
+
+ul li ul li { 
+  background: #fff; 
+  display: block; 
+  color: #707070;
+  text-shadow: 0;
+  border-style: double;
+  border-width: 1px;
+  border-color: #D4D4D4;
+}
+
+ul li ul li:hover { 
+	background: #D7D7D7; 
+}
+
+ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+  <img src="../Images/LogoTemplateFinal.fw.png" width="960" height="150" style="background-color: #FFFFFF; display:block;
+  " />
+  
+<ul><li>Home
+		<ul>
+		<li><a href="../Index.html">Home</a></li>
+        <li><a href="../Home/News.html">News</a></li>
+   	 	</ul>
+	</li>
+  <li>CTE
+  	<ul>
+    	<li><a href="../CTE/SkylineCTE.html">Skyline CTE</a></li>
+        <li><a href="../CTE/GTI.html">Granite Technical Institution</a></li>
+        <li><a href="http://skylinecareercenter.weebly.com/">Career Center</a></li>
+        <li><a href="../CTE/TechCourse.html">Technology Courses</a></li>
+        <li><a href="../CTE/Internships.html">Internships</a></li>
+        <li><a href="../CTE/Graphics.html">Graphics</a></li>
+        <li><a href="https://www.precisionexams.com/usoe/welcome/">CTE Testing</a></li>
+        
+    </ul>
+  </li>
+  <li>TSA
+    <ul>
+      <li><a href="General.html">General</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Leadership.html">Leadership</a></li>
+      <li><a href="Competitions.html">Competitions</a></li>
+      <li><a href="Events & Conferences.html">Events & Conferences</a></li>
+      <li><a href="Service Projects.html">Service Projects</a></li>
+      <li><a href="Fundraising.html">Fundraising</a></li>
+      <li><a href="VEX.html">VEX</a></li>
+    </ul>
+  </li>
+  <li>Design Brief
+  	<ul>
+    	<li><a href="../Design Brief/Overview.html">Overview</a></li>
+        <li><a href="../Design Brief/Problem.html">Problem</a></li>
+        <li><a href="../Design Brief/Information.html">Information</a></li>
+        <li><a href="../Design Brief/Solution.html">Solution</a></li>
+    </ul>
+  </li>
+  <li>Calendar
+  	<ul>
+    	<li><a href="../Calendar/Calendar.html">Calendar</a></li>
+    </ul>
+  </li>
+  <li>Resources
+  	<ul>
+    	<li><a href="../Resources/Resources.html">Resources Links & References</a></li>
+    </ul>
+  </li>
+</ul>
+  </div>
+
+  <div class="content">
+  	<br>
+  	<h1>Competitions</h1>
+  	<p><b>Animatronics</b> Participants (one team per chapter, one entry per team) demonstrate knowledge of mechanical and control systems by designing, fabricating, and controlling an animatronics device that will communicate, entertain, inform, demonstrate and/or illustrate a topic, idea, subject or concept. Sound, lights and a surrounding environment must accompany the device.</p>
+    <p><b>Architectural Renovation</b> Participants (one individual or team per chapter, one entry per individual or team) develop a set of architectural plans and related materials for an annual architectural design challenge and construct a physical, as well as a computer-generated model, to accurately depict their design.</p>
+    <p><b>Biotechnology Design</b> Participants (three teams of two to six individuals per state, one entry per team) select a contemporary biotechnology problem (that relates to the current year’s published area of focus) and demonstrate understanding of it through documented research, the development of a solution, a display, and an effective multimedia presentation.</p>
+    <p><b>Career Preparation</b> Participants (six individuals per state) research technology-related careers designated by the Bureau of Labor Statistics as falling in the top ten employment growth areas in the near future. As part of the research for the careers noted in the current conference year,students prepare a resume and cover letter for each career. Semifinalists participate in an on-site job interview related to one of the careers.</p>
+    <p><b>Chapter Team</b> Participants (one team of six individuals per chapter) take a written parliamentary procedures test in order to qualify for the semifinalist level of competition. Semifinalist teams perform an opening ceremony, dispose of three items of business, and perform a closing ceremony within a specified time period.</p>
+    <p><b>Children’s Stories</b> Participants (one team per chapter; a team of one individual is permitted) create an illustrated children's story of artistic, instructional, and social value. The story must have a science, technology, engineering, and mathematics (STEM) focus. It may be written in prose or poetry and take the form of a fable, adventure story, or other structure.</p>
+    <p><b>Computer-Aided Design (CAD) 2D, Architecture</b> Participants (two individuals per state) create representations, such as foundation and/or floor plans, and/or elevation drawings, and/or details of architectural ornamentation or cabinetry.</p>
+    <p><b>Computer-Aided Design (CAD) 3D, Engineering</b> Participants (two individuals per state) create 3D computer model(s) of an engineering or machine object, such as a machine part, tool, device, or manufactured product.</p>
+    <p><b>Computer Numerical Control (CNC) Production</b> Participants (one team of two individuals per chapter, one entry per team) design, fabricate, and demonstrate their ability to use a CNC machine to produce a device based on a problem posted on the TSA website.</p>
+    <p><b>Debating Technological Issues</b> Participants (three teams of two individuals per state) work together to prepare for a debate against a team from another chapter. Teams are instructed on site to take either the pro or con side of a subtopic (which falls under a general topic) that is designated annually.</p>
+    <p><b>Desktop Publishing</b> Participants (three individuals per state) produce a portfolio containing a news release, a three-column newsletter, and a poster. Semifinalists work to solve an on-site problem to demonstrate their abilities to use the computer to design and edit materials for an in-house publication.</p>
+    <p><b>Digital Video Production</b> Participants (three teams per state, one entry per team) develop a digital video/film that focuses on the current year’s theme. Sound should accompany the film.</p>
+    <p><b>Dragster Design</b> Participants (two individuals per chapter, one entry per individual) design, produce working drawings for, and build a CO2-powered dragster.</p>
+    <p><b>Engineering Design</b> Participants (one team of three to five individuals per chapter, one entry per team) work to design and fabricate a device that will meet the specific needs of a person with a disability. Through use of a model/prototype, display, and portfolio, participants document and justify their identified problem and solution, as well as the solution’s impact on a member of their community and on society. Semifinalists justify and demonstrate their solution in a timed presentation</p>
+    <p><b>Essays on Technology</b> Participants (three individuals per state) write a synthesis essay to make insightful connections based on a current technological topic.</p>
+    <p><b>Extemporaneous Speech</b> Participants (three individuals per state) give a three to five minute speech fifteen minutes after having drawn a card on which a technology or TSA topic for a speech is written.</p>
+    <p><b>Fashion Design</b> Participants (three teams of two to four individuals per state) research, develop, and create garment designs, garment mockups, and portfolios that reflect the current year’s published theme. Semifinalists participate in an on-site event in which they present their garment designs to judges.</p>
+    <p><b>Flight Endurance</b> Participants (two individuals per chapter, one entry per individual) analyze flight principles with a rubber band-powered model aircraft.</p>
+    <p><b>Future Technology Teacher</b> Participants (three individuals per chapter) research and select three accredited colleges or universities that offer technology education teacher preparation as a major. Each participant writes a one page simulated college essay explaining why he/she would like to become a technology educator and what would constitute success in the field. Participants also develop and present a lesson plan to judges.</p>
+    <p><b>Manufacturing Prototype</b> Participants (one team per chapter) design and manufacture a prototype of a product (designated annually) and provide a description of how the product could be manufactured in a state-of-the-art American manufacturing facility.</p>
+    <p><b>Music Production</b> Participants (three teams per state; a team of one member is permitted) produce an original musical piece that is designed to be played during the national TSA conference opening or closing general sessions.</p>
+    <p><b>On Demand Video</b> Participants (one team of two or more individuals per chapter, one entry per team) write, shoot, and edit a sixty-second video on site at the conference.</p>
+    <p><b>Photographic Technology</b> Participants (one individual per chapter) capture and process photographic and digital prints that depict the current year’s published theme. Semifinalists participate in an on-site event in which they capture digital images and utilize multimedia software to prepare and develop a media presentation during the annual conference.</p>
+    <p><b>Prepared Presentation</b> Participants (three individuals per state) deliver an oral presentation that includes a visual enhancement, based on the theme for the current year’s conference.</p>
+    <p><b>Promotional Graphics</b> Participants (two individuals per chapter, one entry each) develop and submit electronically a graphic design that can be used to promote participation in TSA-related interests.</p>
+    <p><b>SciVis</b> Participants (three teams per state, one entry per team) develop a visualization focusing on a subject or topic from one or more of the following areas: science, technology, engineering or mathematics.</p>
+    <p><b>Software Development</b> Participants (one team per chapter) work as part of a team to participate in the development, debugging, and documentation of a software design project using freely available software development toolkits. Through a multimedia presentation and documentation, the team explains its knowledge of the software development process.</p>
+    <p><b>Structural Design and Engineering</b> Participants (one team of two individuals per chapter, one entry per team) work as part of a team to build a structure that is posted on the TSA website. The structure is destructively tested and assessed to determine design efficiency. Semifinalists work on a construction problem that is a variation of the posted design.</p>
+    <p><b>System Control Technology</b> Participants (one team of three individuals per state, one entry per team) work as part of a team on site to develop a computer-controlled model-solution to a problem, typically one from an industrial setting. Teams analyze the problem, build a computer-controlled mechanical model, program the model, explain the program and mechanical features of the model-solution, and write instructions for evaluators to operate the device.</p>
+    <p><b>Technical Sketching and Application</b> Participants (two individuals per chapter) complete a written test in order to qualify for the semifinalist level of competition. Semifinalists must demonstrate their ability to solve on-site engineering graphics problems using standard drafting techniques.</p>
+    <p><b>Technology Bowl</b> Participants (one team of three individuals per chapter) complete a written, objective test in order to qualify for oral question/response, head-to-head team competition.</p>
+    <p><b>Technology Problem Solving</b> Participants (one team of two individuals per chapter) work together on site to develop and create a solution to a problem using the limited materials provided and the tools allowed.</p>
+    <p><b>Transportation Modeling</b> Participants (one individual per chapter, one entry per individual) design and produce a scale model of a vehicle that fits the annual design problem. </p>
+    <p><b>Video Game Design</b> Participants [three teams per state (a minimum of two individuals per team), one entry per team] develop an E+10-rated game that focuses on the subject of their choice.</p>
+    <p><b>Webmaster</b> Participants (one team of three to five individuals per chapter) are required to design, build, and launch a website that features their school's career and technology/engineering program, the TSA chapter, and the chapter’s ability to research and present a given topic pertaining to technology. Semifinalists participate in an on-site interview to demonstrate the knowledge and expertise gained during the development of the website - with an emphasis on web design methods and practices, as well as their research for the annual design topic.</p>
+    
+    <!-- end .content --></div>
+  <div class="footer">
+    <p><font color = #FFFFFF></font></p>
+    <center><h4><font color =#FFFFFF><a href="../Contact.html">Contact</a> | Copyright 2015</h4></center>
+  <!-- end .footer --></div>
+  <!-- end .container --></div>
+
+</body>
+</html>

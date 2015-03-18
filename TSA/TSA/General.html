@@ -1,0 +1,352 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style type="text/css">
+body {
+  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 20px 50px 20px;
+  font-size: 13px;
+  background: #42413C;
+  color:#000;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 
+	padding-right: 15px;
+	padding-left: 15px; 
+}
+
+a img {
+	border: none;
+}
+
+a:link {
+	color: #42413C;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+
+.container {
+	width: 960px;
+	padding: 0;
+	background-color: #fff;
+	margin: 10px auto;
+}
+
+.header {
+	background-color: #555;
+	width:100%;
+	appearance:pull-down-menu;
+	height: 195px;	
+}
+
+.sidebar1 {
+	float: left;
+	width: 210px;
+	background-color: #99CCFF;
+	padding: 10px;
+	padding-top: 30px;
+}
+
+.content {
+	padding: 10px 0;
+	width: 700px;
+	float: right;
+	background-color: #fff;
+	padding-top: 10px;
+	padding-right: 30px;
+}
+
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
+}
+
+/* ~~ The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) ~~ */
+ul.nav {
+	list-style: none; /* this removes the list marker */
+	border-top: 1px solid #666; /* this creates the top border for the links - all others are placed using a bottom border on the LI */
+	margin-bottom: 15px; /* this creates the space between the navigation on the content below */
+}
+ul.nav li {
+	border-bottom: 1px solid #666; /* this creates the button separation */
+}
+ul.nav a, ul.nav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
+	padding: 5px 5px 5px 15px;
+	display: block; /* this gives the anchor block properties so it fills out the whole LI that contains it so that the entire area reacts to a mouse click. */
+	width: 141px;  /*this width makes the entire button clickable for IE6. If you don't need to support IE6, it can be removed. Calculate the proper width by subtracting the padding on this link from the width of your sidebar container. */
+	text-decoration: none;
+	background-color: #333333;
+	color:#FFFFFF;
+	height: 41px;
+	
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
+	color:#FFCC00;
+}
+
+/* ~~ The footer styles ~~ */
+.footer {
+	padding: 10px 0;
+	background-color: #333333;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+}
+
+/* ~~ Miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the .container) if the .footer is removed or taken out of the .container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+ul {
+  text-align: left;
+  display: inline;
+  margin: 0;
+  padding: 15px 4px 17px 0;
+  list-style: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+ul li {
+  font: bold 14px sans-serif;
+  display: inline-block;
+  margin-right: -4px;
+  position: relative;
+  padding: 15px 53px;
+  background: #555;
+  cursor: pointer;
+  transition: all 0.2s;
+  color:#fff;
+}
+
+ul li:hover {
+  background: #fff;
+  color: #555;
+}
+
+ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 46px;
+  left: 0;
+  width: 200px;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -transition: opacity 0.2s;
+  border: 1px;
+  
+}
+
+ul li ul li { 
+  background: #fff; 
+  display: block; 
+  color: #707070;
+  text-shadow: 0;
+  border-style: double;
+  border-width: 1px;
+  border-color: #D4D4D4;
+}
+
+ul li ul li:hover { 
+	background: #D7D7D7; 
+}
+
+ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+  <a href="#"><img src="../Images/LogoTemplateFinal.fw.png" width="960" height="150" style="background-color: #FFFFFF; display:block;
+  " /></a>
+  
+<ul><li>Home
+		<ul>
+		<li><a href="../Index.html">Home</a></li>
+        <li><a href="../Home/News.html">News</a></li>
+   	 	</ul>
+	</li>
+  <li>CTE
+  	<ul>
+    	<li><a href="../CTE/SkylineCTE.html">Skyline CTE</a></li>
+        <li><a href="../CTE/GTI.html">Granite Technical Institution</a></li>
+        <li><a href="http://skylinecareercenter.weebly.com/">Career Center</a></li>
+        <li><a href="../CTE/TechCourse.html">Technology Courses</a></li>
+        <li><a href="../CTE/Internships.html">Internships</a></li>
+        <li><a href="../CTE/Graphics.html">Graphics</a></li>
+        <li><a href="https://www.precisionexams.com/usoe/welcome/">CTE Testing</a></li>
+        
+    </ul>
+  </li>
+  <li>TSA
+    <ul>
+      <li><a href="General.html">General</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Leadership.html">Leadership</a></li>
+      <li><a href="Competitions.html">Competitions</a></li>
+      <li><a href="Events & Conferences.html">Events & Conferences</a></li>
+      <li><a href="Service Projects.html">Service Projects</a></li>
+      <li><a href="Fundraising.html">Fundraising</a></li>
+      <li><a href="VEX.html">VEX</a></li>
+    </ul>
+  </li>
+  <li>Design Brief
+  	<ul>
+    	<li><a href="../Design Brief/Overview.html">Overview</a></li>
+        <li><a href="../Design Brief/Problem.html">Problem</a></li>
+        <li><a href="../Design Brief/Information.html">Information</a></li>
+        <li><a href="../Design Brief/Solution.html">Solution</a></li>
+    </ul>
+  </li>
+  <li>Calendar
+  	<ul>
+    	<li><a href="../Calendar/Calendar.html">Calendar</a></li>
+    </ul>
+  </li>
+  <li>Resources
+  	<ul>
+    	<li><a href="../Resources/Resources.html">Resources Links & References</a></li>
+    </ul>
+  </li>
+</ul>
+  </div>
+<div class="sidebar1">
+	<h1>Additional Information</h1>
+    <hr>
+    <p><a href="http://tsaweb.org/">Official Technology Student Association</a></p>
+    <hr>
+    <p><a href="http://www.utahtsa.org/index.htm">Utah Technology Student Association</a></p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+ 
+</div>
+  <div class="content">
+  	<br>
+    <h1>Skyline TSA General</h1>
+    <a href="#"><img src="../Images/TSA_Logo_4c no white copy.jpg" width="400" height="220" style="background-color: #FFFFFF; display:block;padding-left: 10px;" /></a>
+    <p></p>
+    <h2>Who Are TSA Members?</h2>
+    <p>The Technology Student Association (TSA) is a national student organization devoted exclusively to the needs of students who are engaged in science, technology, engineering and mathematics (STEM). &nbsp;Open to students enrolled in or who have completed technology education courses, TSA’s membership includes over 200,000 middle and high school students in approximately 2,000 schools spanning 49 states. TSA is supported by educators, parents and business leaders who believe in the need for a technologically literate society. Members learn through exciting competitive events, leadership opportunities and much more. The diversity of activities makes TSA a positive experience for every student. From engineers to business managers, our alumni credit TSA with a positive influence on their lives.</p>
+    <h2>School Chapters</h2>
+    <p>TSA chapters take the study of STEM beyond the classroom and allows students the chance to pursue their interests among friends with similar goals and interests. Together, chapter members work on competitive events, attend conferences on the state and national levels and have a good time raising funds to get there. Chapter organization develops leadership, as members may become officers within their state and then run nationally. Our chapters are committed to a national service project and are among the most service-oriented groups in the community.</p>
+    <h2>How To Start A TSA Chapter</h2>
+    <p>All that is needed is a motivated teacher and an eager group of students. An expensive array of high-tech equipment is not necessary. Just call 801-867-0372 or click on Join TSA for more information.</p>
+    <h2>Competitions</h2>
+    <p>In order to engage students with the drive to make a difference in the worl, TSA offers activities that captivate and intrigue students into spending hours working on it after school for weeks at a time.  TSA members have the opportunity to compete at exciting state conferences and then the annual National Conference.  These competitions focus on the subjects of science, technology, engineering and math, however can vary greatly to suit the interests of the member.  Students can work individually or as a team member in areas such as agriculture and biotechnology, website design, dragster design, flight challenge, film technology, CAD with 3D modeling, desktop publishing, debate, fashion design, radio controlled transportation, or scientific visualization.</p>
+    <h2>Curriculum Integration - STEM</h2>
+    <p>Education directives at the federal and state levels focus on providing avenues for initiatives such as STEM (Science, Technology, Engineering and Mathematics) education. TSA helps teachers meet the criteria for STEM education goals through exciting programs that include technology activities, competitions, leadership, and teamwork for students. In addition, all TSA activities are correlated to the Standards for Technological Literacy, as set forth by the International Technology and Engineering Educators Association (ITEEA). Teachers can use TSA’s activities during the school day in their classroom and extend the learning beyond the classroom through a TSA chapter.</p>
+    <h2>Mission Statement</h2>
+    <p>The Technology Student Association fosters personal growth, leadership, and opportunities in Science, Technology, Engineering, and Mathematics (STEM); members apply and integrate these concepts through co-curricular activities, competitions, and related programs.</p>
+    <h2>TSA Motto</h2>
+    <p>Learning To Live In A Technical World</p>
+    <h2>TSA Creed</h2>
+    <p>I believe that Technology Education holds an important place in my life in the technical world. I believe there is a need for the development of good attitudes concerning work, tools, materials, experimentation, and processes of industry. Guided by my teachers, artisans from industry, and my own initiative, I will strive to do my best in making my school, community, state, and nation better places in which to live. I will accept the responsibilities that are mine. I will accept the theories that are supported by proper evidence. I will explore on my own for safer, more effective methods of working and living. I will strive to develop a cooperative attitude and will exercise tact and respect for other individuals. Through the work of my hands and mind, I will express my ideas to the best of my ability. I will make it my goal to do better each day the task before me, and to be steadfast in my belief in my God, and my fellow Americans.</p>
+    <!-- end .content --></div>
+  <div class="footer">
+    <p><font color = #FFFFFF></font></p>
+    <center><h4><font color =#FFFFFF><a href="../Contact.html">Contact</a> | Copyright 2015</h4></center>
+  <!-- end .footer --></div>
+  <!-- end .container --></div>
+
+</body>
+</html>

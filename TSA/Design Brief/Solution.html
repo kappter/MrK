@@ -1,0 +1,344 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style type="text/css">
+body {
+  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 20px 50px 20px;
+  font-size: 13px;
+  background: #42413C;
+  color:#000;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 
+	padding-right: 15px;
+	padding-left: 15px; 
+}
+
+a img {
+	border: none;
+}
+
+a:link {
+	color: #42413C;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+
+.container {
+	width: 960px;
+	padding: 0;
+	background-color: #fff;
+	margin: 10px auto;
+}
+
+.header {
+	background-color: #555;
+	width:100%;
+	appearance:pull-down-menu;
+	height: 350px;	
+}
+
+.sidebar1 {
+	float: left;
+	width: 230px;
+	background-color: #ABFD9E;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+.content {
+	padding: 10px 0;
+	width: 500px;
+	float: left;
+	background-color: #fff;
+}
+.sidebar2 {
+	float: left;
+	width: 230px;
+	background-color: #ABFD9E;
+	padding: 10px 0;
+}
+
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
+}
+
+/* ~~ The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) ~~ */
+ul.nav {
+	list-style: none; /* this removes the list marker */
+	border-top: 1px solid #666; /* this creates the top border for the links - all others are placed using a bottom border on the LI */
+	margin-bottom: 15px; /* this creates the space between the navigation on the content below */
+}
+ul.nav li {
+	border-bottom: 1px solid #666; /* this creates the button separation */
+}
+ul.nav a, ul.nav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
+	padding: 5px 5px 5px 15px;
+	display: block; /* this gives the anchor block properties so it fills out the whole LI that contains it so that the entire area reacts to a mouse click. */
+	width: 141px;  /*this width makes the entire button clickable for IE6. If you don't need to support IE6, it can be removed. Calculate the proper width by subtracting the padding on this link from the width of your sidebar container. */
+	text-decoration: none;
+	background-color: #333333;
+	color:#FFFFFF;
+	height: 41px;
+	
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
+	color:#FFCC00;
+}
+
+/* ~~ The footer styles ~~ */
+.footer {
+	padding: 10px 0;
+	background-color: #333333;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+}
+
+/* ~~ Miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the .container) if the .footer is removed or taken out of the .container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+ul {
+  text-align: left;
+  display: inline;
+  margin: 0;
+  padding: 15px 4px 17px 0;
+  list-style: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+ul li {
+  font: bold 14px sans-serif;
+  display: inline-block;
+  margin-right: -4px;
+  position: relative;
+  padding: 15px 53px;
+  background: #17ED36;
+  cursor: pointer;
+  transition: all 0.2s;
+  color:#555;
+}
+
+ul li:hover {
+  background: #fff;
+  color: #555;
+}
+
+ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 46px;
+  left: 0;
+  width: 200px;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -transition: opacity 0.2s;
+  
+  
+}
+
+ul li ul li { 
+  background: #fff; 
+  display: block; 
+  color: #707070;
+  text-shadow: 0;
+  border-style: double;
+  border-width: 1px;
+  border-color: #D4D4D4;
+  
+}
+
+ul li ul li:hover { 
+	background: #D7D7D7; 
+}
+
+ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+  <img src="Images/E-Waste Banner.png" width="960" height="300" style="background-color: #FFFFFF; display:block;
+  " />
+  
+<ul><li>Home
+		<ul>
+		<li><a href="../Index.html">Home</a></li>
+        <li><a href="../Home/News.html">News</a></li>
+   	 	</ul>
+	</li>
+  <li>CTE
+  	<ul>
+    	<li><a href="../CTE/SkylineCTE.html">Skyline CTE</a></li>
+        <li><a href="../CTE/GTI.html">Granite Technical Institution</a></li>
+        <li><a href="http://skylinecareercenter.weebly.com/">Career Center</a></li>
+        <li><a href="../CTE/TechCourse.html">Technology Courses</a></li>
+        <li><a href="../CTE/Internships.html">Internships</a></li>
+        <li><a href="../CTE/Graphics.html">Graphics</a></li>
+        <li><a href="https://www.precisionexams.com/usoe/welcome/">CTE Testing</a></li>
+        
+    </ul>
+  </li>
+  <li>TSA
+    <ul>
+      <li><a href="../TSA/General.html">General</a></li>
+      <li><a href="../TSA/About.html">About</a></li>
+      <li><a href="../TSA/Leadership.html">Leadership</a></li>
+      <li><a href="../TSA/Competitions.html">Competitions</a></li>
+      <li><a href="../TSA/Events & Conferences.html">Events & Conferences</a></li>
+      <li><a href="../TSA/Service Projects.html">Service Projects</a></li>
+      <li><a href="../TSA/Fundraising.html">Fundraising</a></li>
+      <li><a href="../TSA/VEX.html">VEX</a></li>
+    </ul>
+  </li>
+  <li>Design Brief
+  	<ul>
+    	<li><a href="Overview.html">Overview</a></li>
+        <li><a href="Problem.html">Problem</a></li>
+        <li><a href="Information.html">Information</a></li>
+        <li><a href="Solution.html">Solution</a></li>
+    </ul>
+  </li>
+  <li>Calendar
+  	<ul>
+    	<li><a href="../Calendar/Calendar.html">TSA Calendar</a></li>
+    </ul>
+  </li>
+  <li>Resources
+  	<ul>
+    	<li><a href="../Resources/Resources.html">Resources Links & References</a></li>
+    </ul>
+  </li>
+</ul>
+  </div>
+<div class="sidebar1">
+	<h2>Additional Information</h2>
+    <hr>
+    <p><a href="http://www.ci.west-jordan.ut.us/PW.aspx?pgID=3.14.4.3">West Jordan Recycling</a></p>
+    <hr>
+    <p><a href="http://sandy.utah.gov/government/public-works/recycling/e-waste-recycling.html">Sandy Recycling</a></p>
+    <hr>
+    <p><a href="http://www.sjc.utah.gov/stormwater-hazardouswaste.asp">South Jordan Hazardous Wast & Salt Lake Valley Recycling</a></p>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  <!-- end .sidebar1 --></div>
+  <div class="content">
+    <h1>Solutions</p>
+    <h2>E-Waste: Renewable Solutions for a Disposable Society</h2>
+    <h2>Recycling</h2>
+    <p>One of many methods to reduce E-Waste in our community is to shunt the flow of electronics from the landfill to recycling centers. The nearest recycling plant that accepts E-Waste is in Midvale, and will accept anything from old fax machines to worn out batteries. Recycling the old electronics can recover up to 95% of materials, and eliminates the risk of harmful chemicals leaching into the ground and water supplies.</p>
+    <p><img src="../Images/recycling-process-flow-chart-720x1024.jpg" width="100%"></p>
+    <h2>Reuse</h2>
+    <p>Another way you can help to combat the growing tide of E-Waste is to use your old electronics for as long as possible before replacing them, or sending them to donation centers where they can be redistributed to people who may have a use for what you consider trash. When sending your electronics to be reused, make sure that the organization will recycle, rather than throw away the old electronics if they are unable to find a recipient.</p> 
+    
+    <p><img src="Images/stock-photo-computer-button-on-aluminum-and-recycle-label-where-it-is-written-to-be-recycled-concept-of-125615912.jpg" width="400" height="400" alt=""/></p>
+<h2>Local Solutions Availabe to You!</h2> 
+	<h3>Electronic Waste Drop-Off Locations</h3>
+    <p>The Salt Lake Valley Health Department offers e-waste recycling year-round and free of charge at two county collection facilities:
+<br>
+Salt Lake Valley Landfill Disposal and Recycling Facilities<br>
+(801) 974-6920<br>
+6030 West California Avenue (1300 South)<br>
+Salt Lake City, UT 84104<br>
+<br>
+Trans Jordan Landfill<br>
+801 569-8994<br>
+10873 South 7200 West, Hwy U-111<br>
+South Jordan, Utah<br>
+Open Mon - Sat, 8 am - 4 pm</p>
+    <h3>City Recycling Programs</h3> 
+    <p><b>West Jordan:</b> The City of West Jordan has several recycling programs including seasonal green waste pickup; curbside paper, plastic and metal collection; glass recycling drop off sites; and paper and electronic shred events are held four times per year. These programs help keep recyclables out of the landfill. 
+    <br>
+    <br>
+    Paper Shredding and E-Waste Recycling
+    <br>
+The City holds four shred days where residents can bring 2 banker's boxes of documents for shredding as well as electronic waste for recycling (no stereo speakers or vacuum cleaners). Hard drives must be removed from the computer if you would like it shredded.</p>
+	<p><b>Sandy:</b> Sandy Public Works often receives calls from citizens who want to recycle electronic devices in an environmentally sound manner. The following information is provided to help residents seeking to dispose of their E-waste responsibly and economically.</p>
+    <p>Sandy City Public Works<br>
+8775 South 700 West<br>
+801-568-2999<br>
+<br>
+In addition to the collection of antifreeze, batteries, oil, and paint, you may drop-off your e-waste any time Monday - Friday from 7 a.m. until 4:30 p.m. throughout the year, just check-in at the main office. This service is free for all residences in the Salt Lake Valley. No e-waste from businesses will be accepted.</p>
+	<p></p>
+	<br>
+	<h2>GET INVOLVED NOW!</h2>
+    <!-- end .content --></div>
+  <div class="sidebar2">
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    
+    </div>
+  <div class="footer">
+    <p><font color = #FFFFFF></font></p>
+    <center><h4><font color =#FFFFFF><a href="../Contact.html">Contact</a> | Copyright 2015</h4></center>
+  <!-- end .footer --></div>
+  <!-- end .container --></div>
+
+</body>
+</html>
