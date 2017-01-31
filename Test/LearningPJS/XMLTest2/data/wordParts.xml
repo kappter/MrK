@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<wordPart>
+  <prefix id="0" value="pre">Pre-</prefix>
+  <prefix id="1" value="un">Un-</prefix>
+  <prefix id="2" value="anti">Anti-</prefix>
+  <root id="0" value="mass">Mass</root>
+  <root id="1" value="break">Break</root>
+  <root id="2" value="board">Board</root>
+  <suffix id="0" value="ed">Ed</suffix>
+  <suffix id="1" value="ing">Ing</suffix>
+  <suffix id="2" value="est">Est</suffix>
+</wordPart>
